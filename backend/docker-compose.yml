@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: knowtruly_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-knowtruly}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-knowtruly_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-knowtruly}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U knowtruly"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - knowtruly_network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: knowtruly_qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__GRPC_PORT: 6334
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - knowtruly_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: knowtruly_backend
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-knowtruly}:${POSTGRES_PASSWORD:-knowtruly_dev_password}@postgres:5432/${POSTGRES_DB:-knowtruly}
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+    volumes:
+      - ./app:/app/app
+      - ./templates:/app/templates
+      - ./generated_resumes:/app/generated_resumes
+      - ./uploads:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    networks:
+      - knowtruly_network
+
+volumes:
+  postgres_data:
+  qdrant_data:
+
+networks:
+  knowtruly_network:
+    driver: bridge
