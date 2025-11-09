@@ -92,6 +92,13 @@ lerna-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+*.d.ts
+!src/vite-env.d.ts
+!src/env.d.ts
+
+# Compiled JavaScript from TypeScript in src (keep config .js files)
+frontend/src/**/*.js
+!frontend/src/**/*.config.js
 
 # Frontend environment files
 frontend/.env
