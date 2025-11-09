@@ -1,0 +1,130 @@
+=========================================
+KnowTruly Backend - Endpoint Testing
+=========================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 1: System Health
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Health Check (HTTP 200)
+{
+    "status": "healthy",
+    "environment": "development"
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 2: Authentication
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Student Registration
+   Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmN...
+
+[0;32m✓ PASS[0m: Student Login
+
+[0;32m✓ PASS[0m: Get Current User
+Expecting value: line 1 column 1 (char 0)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 3: Profiles
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Create Profile
+   Profile ID: 2f509169-9902-4fa5-91a9-6bf023b763d2
+{
+    "profile_id": "2f509169-9902-4fa5-91a9-6bf023b763d2",
+    "version": 1,
+    "embedding_id": "4ac35a76-dc1b-4802-b6a7-4d9698c4ea98"
+}
+
+[0;32m✓ PASS[0m: Get Profile
+{
+    "id": "2f509169-9902-4fa5-91a9-6bf023b763d2",
+    "owner_id": "f7706ec0-f802-43db-9990-4d4d60f15383",
+    "version": 1,
+    "canonical_name": "Test Student",
+    "headline": "Software Engineer",
+    "summary": "Experienced developer with Python and FastAPI",
+    "contact_handles": {
+        "email": null,
+        "phone": null,
+
+[0;32m✓ PASS[0m: Update Profile
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 4: Semantic Matching
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Recruiter Registration
+
+[0;31m✗ FAIL[0m: Semantic Matching
+   Error: {"detail":"Matching failed: (psycopg2.errors.NotNullViolation) null value in column \"role_id\" of relation \"match_results\" violates not-null constraint\nDETAIL:  Failing row contains (c4936f9d-4407-4a22-8643-2c11d03916a6, f7706ec0-f802-43db-9990-4d4d60f15383, null, 0.7440331542857143, {\"top_matching_skills\": [{\"skill\": \"Python\", \"confidence\": 0.9},..., 2025-11-09 17:29:49.549289+00).\n\n[SQL: INSERT INTO match_results (id, candidate_profile_id, role_id, score, explanation) VALUES (%(id__0)s::UUID, %(candidate_profile_id__0)s::UUID, %(role_id__0)s::UUID, %(score__0)s, %(explanation__0)s), (%(id__1)s::UUID, %(candidate_profile_id__1)s::UUID, %(role_id__1)s::UUID, %(score__1)s, %(explanation__1)s), (%(id__2)s::UUID, %(candidate_profile_id__2)s::UUID, %(role_id__2)s::UUID, %(score__2)s, %(explanation__2)s) RETURNING match_results.matched_at, match_results.id]\n[parameters: {'candidate_profile_id__0': 'f7706ec0-f802-43db-9990-4d4d60f15383', 'explanation__0': '{\"top_matching_skills\": [{\"skill\": \"Python\", \"confidence\": 0.9}, {\"skill\": \"FastAPI\", \"confidence\": 0.9}], \"top_evidence\": [{\"type\": \"project\", \"id\": \"7b9a1106-6204-4427-ac27-0f232e4ae0ee\", \"relevance\": 0.85}], \"gaps\": [], \"vector_similarity\": 0.7996392, \"rule_score\": 0.6142857142857142}', 'score__0': 0.7440331542857143, 'role_id__0': None, 'id__0': UUID('c4936f9d-4407-4a22-8643-2c11d03916a6'), 'candidate_profile_id__1': '56735433-b469-4ab6-ba3e-51efbcb18f6b', 'explanation__1': '{\"top_matching_skills\": [{\"skill\": \"Python\", \"confidence\": 0.9}, {\"skill\": \"FastAPI\", \"confidence\": 0.9}], \"top_evidence\": [{\"type\": \"project\", \"id\": \"c037d49a-f825-415d-8df5-575286cb19e8\", \"relevance\": 0.85}], \"gaps\": [], \"vector_similarity\": 0.7826578, \"rule_score\": 0.6142857142857142}', 'score__1': 0.7321461742857142, 'role_id__1': None, 'id__1': UUID('9a794be2-fa99-4bdd-9229-d38b3388e63d'), 'candidate_profile_id__2': '1e2f1db9-8c90-44d4-91e7-9bbd29e3457f', 'explanation__2': '{\"top_matching_skills\": [{\"skill\": \"Python\", \"confidence\": 0.9}, {\"skill\": \"FastAPI\", \"confidence\": 0.9}], \"top_evidence\": [{\"type\": \"project\", \"id\": \"dea8b6c4-8f2c-435e-8df6-49417b926dbb\", \"relevance\": 0.85}], \"gaps\": [], \"vector_similarity\": 0.67050123, \"rule_score\": 0.6142857142857142}', 'score__2': 0.6536365752857142, 'role_id__2': None, 'id__2': UUID('f672a05d-258b-45dc-8dcc-e58a5b8a32e5')}]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 5: Resume Generation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;31m✗ FAIL[0m: List Resume Templates
+   Error: []
+
+[1;33m⚠ SKIP[0m: AI Rephrasing (requires Gemini API key)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 6: Verification & Signatures
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Issuer Registration
+
+[0;32m✓ PASS[0m: Generate RSA Key Pair
+   Public key generated successfully
+
+[0;31m✗ FAIL[0m: Sign Verifiable Claim
+   Error: {"detail":[{"type":"missing","loc":["body","subject_profile_id"],"msg":"Field required","input":{"claim":{"type":"degree","payload":{"subject_profile_id":"2f509169-9902-4fa5-91a9-6bf023b763d2","degree":"BS Computer Science","institution":"Test University","graduation_date":"2022-05-31"}}},"url":"https://errors.pydantic.dev/2.5/v/missing"},{"type":"missing","loc":["body","claim_type"],"msg":"Field required","input":{"claim":{"type":"degree","payload":{"subject_profile_id":"2f509169-9902-4fa5-91a9-6bf023b763d2","degree":"BS Computer Science","institution":"Test University","graduation_date":"2022-05-31"}}},"url":"https://errors.pydantic.dev/2.5/v/missing"},{"type":"missing","loc":["body","claim_payload"],"msg":"Field required","input":{"claim":{"type":"degree","payload":{"subject_profile_id":"2f509169-9902-4fa5-91a9-6bf023b763d2","degree":"BS Computer Science","institution":"Test University","graduation_date":"2022-05-31"}}},"url":"https://errors.pydantic.dev/2.5/v/missing"},{"type":"missing","loc":["body","issuer_private_key"],"msg":"Field required","input":{"claim":{"type":"degree","payload":{"subject_profile_id":"2f509169-9902-4fa5-91a9-6bf023b763d2","degree":"BS Computer Science","institution":"Test University","graduation_date":"2022-05-31"}}},"url":"https://errors.pydantic.dev/2.5/v/missing"}]}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test Group 7: Audit & Compliance
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[0;32m✓ PASS[0m: Get Audit Logs
+{
+    "logs": [],
+    "total": 0
+}
+
+[0;32m✓ PASS[0m: Request Data Access Consent
+   Consent ID: 07d9b12b-55c4-42ba-9c0b-d3665dc76a30
+
+[0;32m✓ PASS[0m: Get Pending Consent Requests
+[
+    {
+        "id": "07d9b12b-55c4-42ba-9c0b-d3665dc76a30",
+        "subject_id": "2f509169-9902-4fa5-91a9-6bf023b763d2",
+        "requester_id": "9559ac8f-345f-40cc-b7e4-044df7c9650a",
+        "data_type": "full_profile",
+        "purpose": "Job application review for Senior Python Developer position",
+        "granted": "pending",
+        "granted_at": null,
+        "revoked_at": null,
+
+[0;32m✓ PASS[0m: Grant Data Access Consent
+
+[0;32m✓ PASS[0m: Privacy Dashboard
+{
+    "pending_consent_requests": 0,
+    "active_consents": 1,
+    "data_access_count_30_days": 0,
+    "recent_access_logs": [],
+    "recent_consent_requests": [
+        {
+            "id": "07d9b12b-55c4-42ba-9c0b-d3665dc76a30",
+            "subject_id": "2f509169-9902-4fa5-91a9-6bf023b763d2",
+            "requester_id": "9559ac8f-345f-40cc-b7e4-044df7c9650a",
+            "data_type": "full_profile",
+            "purpose": "Job application review for Senior Python Developer position",
+            "granted": "granted",
+            "granted_at": "2025-11-09T17:29:51.118196Z",
+            "revoked_at": null,
+
+[0;32m✓ PASS[0m: GDPR Data Export
+   Export includes: user, profile, audit logs
+
+=========================================
+Test Summary
+=========================================
+[0;32mPassed: 16[0m
+[0;31mFailed: 3[0m
+Total:  19
+
+[0;31m❌ Some tests failed[0m

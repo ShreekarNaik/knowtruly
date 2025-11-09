@@ -3,7 +3,7 @@
 Database table initialization - run this inside the container.
 """
 from app.db.base import Base, engine
-from app.models import user, profile, claim, resume
+from app.models import user, profile, claim, resume, audit
 
 print("Creating database tables...")
 Base.metadata.create_all(bind=engine)
