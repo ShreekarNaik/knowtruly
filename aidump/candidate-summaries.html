@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
+      style='font-family: Inter, "Noto Sans", sans-serif'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] px-10 py-4 shadow-md"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-white">
+              <div class="size-6 text-[#0c7ff2]">
+                <svg
+                  fill="none"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-white text-xl font-bold leading-tight tracking-[-0.015em]"
+              >
+                KnowTruly.me
+              </h2>
+            </div>
+            <nav class="flex items-center gap-6">
+              <a
+                class="text-slate-300 hover:text-white text-sm font-medium leading-normal transition-colors"
+                href="#"
+                >Home</a
+              >
+              <a
+                class="text-white text-sm font-semibold leading-normal border-b-2 border-[#0c7ff2] pb-1"
+                href="#"
+                >Candidates</a
+              >
+              <a
+                class="text-slate-300 hover:text-white text-sm font-medium leading-normal transition-colors"
+                href="#"
+                >Jobs</a
+              >
+              <a
+                class="text-slate-300 hover:text-white text-sm font-medium leading-normal transition-colors"
+                href="#"
+                >Company</a
+              >
+            </nav>
+          </div>
+          <div class="flex flex-1 justify-end gap-4 items-center">
+            <label class="flex flex-col min-w-48 !h-10 max-w-xs">
+              <div
+                class="flex w-full flex-1 items-stretch rounded-md h-full"
+              >
+                <div
+                  class="text-slate-400 flex border border-r-0 border-slate-700 bg-[#1f242c] items-center justify-center pl-3 rounded-l-md"
+                  data-icon="MagnifyingGlass"
+                  data-size="20px"
+                  data-weight="regular"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="20px"
+                    viewBox="0 0 256 256"
+                    width="20px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-slate-300 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-l-0 border-slate-700 bg-[#1f242c] focus:border-slate-700 h-full placeholder:text-slate-500 px-3 rounded-l-none text-sm font-normal leading-normal"
+                  placeholder="Search"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 bg-transparent text-slate-300 hover:text-white hover:bg-[#1f242c] transition-colors gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-3"
+            >
+              <div
+                class="text-current"
+                data-icon="Bell"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24px"
+                  viewBox="0 0 256 256"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+              <span
+                class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-[#111418]"
+              ></span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-700 hover:border-[#0c7ff2] transition-colors cursor-pointer"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd2rMo-c6PL77qAvNS7bLlwuacmQ6wcl3JlarxhyrjWy0Vb3WJKmE0h9_u_e7FWhVOMx96hEZEtcAGx_cVZYwIbgj52fM0ekeNKRpUupF2HpkpL71qFsnlH0NFSUMZ7QXzy3gUJ_EgO0vyMMla6Gtv7LpirXt-ON3zZ8WcRtgVIYrR-HDIOpnpYHQIF3HtB-9-FV9so2Wp5mSvn41d9j1ZCtwiV0GzJ1K6OFA3idgBpjsz4ITU8t5lyDZW2BMSirCJjJM4jAZ-Tw");'
+            ></div>
+          </div>
+        </header>
+        <main
+          class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8"
+        >
+          <div
+            class="layout-content-container flex flex-col max-w-5xl flex-1"
+          >
+            <div
+              class="flex flex-wrap justify-between items-center gap-4 p-4 mb-4"
+            >
+              <h1
+                class="text-white tracking-tight text-3xl font-bold leading-tight"
+              >
+                Candidate Summaries
+              </h1>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-400 text-sm">Sort by:</span>
+                <button
+                  class="flex h-8 items-center justify-center gap-x-1.5 rounded-md bg-[#1f242c] hover:bg-[#283039] border border-slate-700 px-3 text-sm font-medium text-white transition-colors"
+                >
+                  Relevance
+                  <i class="material-icons text-base">arrow_drop_down</i>
+                </button>
+              </div>
+            </div>
+            <div class="px-4 py-3 mb-6">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div
+                  class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm"
+                >
+                  <div
+                    class="text-slate-400 flex border border-r-0 border-slate-700 bg-[#1f242c] items-center justify-center pl-4 rounded-l-lg"
+                  >
+                    <i class="material-icons text-xl">search</i>
+                  </div>
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-300 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-l-0 border-slate-700 bg-[#1f242c] focus:border-slate-700 h-full placeholder:text-slate-500 px-4 rounded-l-none text-base font-normal leading-normal"
+                    placeholder="Search candidates by name, skill, or keyword..."
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div
+              class="flex gap-3 p-3 flex-wrap pr-4 mb-6 border-b border-slate-800 pb-6"
+            >
+              <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#1f242c] hover:bg-[#283039] border border-slate-700 px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                Skills
+                <i class="material-icons text-lg">expand_more</i>
+              </button>
+              <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#1f242c] hover:bg-[#283039] border border-slate-700 px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                Experience
+                <i class="material-icons text-lg">expand_more</i>
+              </button>
+              <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#1f242c] hover:bg-[#283039] border border-slate-700 px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                Location
+                <i class="material-icons text-lg">expand_more</i>
+              </button>
+              <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#1f242c] hover:bg-[#283039] border border-slate-700 px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                Availability
+                <i class="material-icons text-lg">expand_more</i>
+              </button>
+              <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-transparent text-[#0c7ff2] hover:bg-[#0c7ff2]/10 border border-transparent hover:border-[#0c7ff2]/30 px-4 text-sm font-medium transition-colors"
+              >
+                <i class="material-icons text-lg">tune</i>
+                All Filters
+              </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+              <div
+                class="group flex flex-col gap-4 rounded-xl bg-[#181d23] border border-slate-800 p-5 shadow-lg hover:shadow-xl hover:border-[#0c7ff2]/50 transition-all duration-300 ease-in-out"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full border-2 border-slate-700 group-hover:border-[#0c7ff2] transition-colors"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByq6T5CEuLKQzB2-C88dZfrb9UTtr_50p5179Q55ellXE9p5fLo2zXIiNcJ-ytRKFcWyPudw43EOZchmYzBKFSg1pR7gxwi8dT8AM2bXSrz1QNwNoyWtZjOSzkuhFNf1BoVKixKegtzgzAoFrgWlE7aTzuvag2QNSBqZyb9t8hbJQX87aHo0jMM-U-lJEqZUPAxiAi-yhSvQ5a06eC7coGwi2VI5B84VXPjZw0G2DkfeutdHTQ89_8xy6WcqnlOs84uvy2DFXxAA");'
+                    ></div>
+                    <div>
+                      <p
+                        class="text-white text-lg font-semibold leading-tight"
+                      >
+                        Ethan Carter
+                      </p>
+                      <p
+                        class="text-slate-400 text-sm font-normal leading-normal"
+                      >
+                        Software Engineer | AI Enthusiast
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="text-xs text-slate-400 mb-0.5">Match</p>
+                    <p class="text-2xl font-bold text-[#0c7ff2]">92%</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-xs font-medium bg-[#0c7ff2]/20 text-[#0c7ff2] px-2.5 py-1 rounded-full"
+                    >Python</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >AI</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >JavaScript</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-300 mb-1">
+                    Highlights:
+                  </h4>
+                  <ul
+                    class="list-disc list-inside text-slate-400 text-sm space-y-1 pl-1"
+                  >
+                    <li>Developed a novel recommendation algorithm.</li>
+                    <li>Contributed to open-source AI projects.</li>
+                  </ul>
+                </div>
+                <div class="flex gap-3 mt-2">
+                  <button
+                    class="flex-1 flex items-center justify-center gap-2 min-w-[84px] cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] hover:bg-[#0a69c4] text-white text-sm font-medium leading-normal transition-colors"
+                  >
+                    <i class="material-icons text-lg">person</i>
+                    <span class="truncate">View Profile</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+                    title="Shortlist Candidate"
+                  >
+                    <i class="material-icons text-lg">bookmark_border</i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl bg-[#181d23] border border-slate-800 p-5 shadow-lg hover:shadow-xl hover:border-[#0c7ff2]/50 transition-all duration-300 ease-in-out"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full border-2 border-slate-700 group-hover:border-[#0c7ff2] transition-colors"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHptIDWPybuWlwynazKB_fE5GHcFJtp2csE_QdqifTH0NOGE6K372oNw6cllxdIktag9RI2LT8ON3k43XQ41R3FGupOSD3p26un8nYgkkySV1wdFYmP81IsnRS10CkQdT_k1TdYua60TQkq01BsWvg1MKhkksTmQGFffEd8KfWogMyIKS5BJWs9qSGxujcX1YphVQKpET4WW2RLb14I9r-q0hFKPnNiPTe1X0JQrzrUcERct-5UnqZoaV33LHhngnBdXjxx45_SA");'
+                    ></div>
+                    <div>
+                      <p
+                        class="text-white text-lg font-semibold leading-tight"
+                      >
+                        Olivia Bennett
+                      </p>
+                      <p
+                        class="text-slate-400 text-sm font-normal leading-normal"
+                      >
+                        Data Scientist | ML Expert
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="text-xs text-slate-400 mb-0.5">Match</p>
+                    <p class="text-2xl font-bold text-[#0c7ff2]">88%</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-xs font-medium bg-[#0c7ff2]/20 text-[#0c7ff2] px-2.5 py-1 rounded-full"
+                    >SQL</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Data Analysis</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >R</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Statistics</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-300 mb-1">
+                    Highlights:
+                  </h4>
+                  <ul
+                    class="list-disc list-inside text-slate-400 text-sm space-y-1 pl-1"
+                  >
+                    <li>Led a team to improve model accuracy by 15%.</li>
+                    <li>Published research in a top-tier journal.</li>
+                  </ul>
+                </div>
+                <div class="flex gap-3 mt-2">
+                  <button
+                    class="flex-1 flex items-center justify-center gap-2 min-w-[84px] cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] hover:bg-[#0a69c4] text-white text-sm font-medium leading-normal transition-colors"
+                  >
+                    <i class="material-icons text-lg">person</i>
+                    <span class="truncate">View Profile</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+                    title="Shortlist Candidate"
+                  >
+                    <i class="material-icons text-lg">bookmark_border</i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl bg-[#181d23] border border-slate-800 p-5 shadow-lg hover:shadow-xl hover:border-[#0c7ff2]/50 transition-all duration-300 ease-in-out"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full border-2 border-slate-700 group-hover:border-[#0c7ff2] transition-colors"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCawQnLBhG_rQdYvIF6f_wVZgCf2DfZL_9MtoXs2T7-13L3KEcuj7uXmvnDklI_R7_0DrtRU0ruDsmoiMctrcnPGSgiatTn_DkWM2OmP8fk4K97ZF6XQyQboBbeXRl7R8O-PbTov_46Qir94HtR3wgNKdM-BlQeydT88Z6Gr0MkHCYBMmUiBs2L1D0xpsBT117a9mg0Sy9Xw-657zJ4fsbrudxwRSX59B8B7bT3lakKGQHF9faKWByvkWBvvlw5zC63JciT-eIBzQ");'
+                    ></div>
+                    <div>
+                      <p
+                        class="text-white text-lg font-semibold leading-tight"
+                      >
+                        Noah Thompson
+                      </p>
+                      <p
+                        class="text-slate-400 text-sm font-normal leading-normal"
+                      >
+                        Product Manager | Tech Innovator
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="text-xs text-slate-400 mb-0.5">Match</p>
+                    <p class="text-2xl font-bold text-orange-400">75%</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Agile</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Roadmap</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Scrum</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >User Stories</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-300 mb-1">
+                    Highlights:
+                  </h4>
+                  <ul
+                    class="list-disc list-inside text-slate-400 text-sm space-y-1 pl-1"
+                  >
+                    <li>Launched 3 successful products in 2 years.</li>
+                    <li>Increased user engagement by 25%.</li>
+                  </ul>
+                </div>
+                <div class="flex gap-3 mt-2">
+                  <button
+                    class="flex-1 flex items-center justify-center gap-2 min-w-[84px] cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] hover:bg-[#0a69c4] text-white text-sm font-medium leading-normal transition-colors"
+                  >
+                    <i class="material-icons text-lg">person</i>
+                    <span class="truncate">View Profile</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+                    title="Shortlist Candidate"
+                  >
+                    <i class="material-icons text-lg">bookmark_border</i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl bg-[#181d23] border border-slate-800 p-5 shadow-lg hover:shadow-xl hover:border-[#0c7ff2]/50 transition-all duration-300 ease-in-out"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full border-2 border-slate-700 group-hover:border-[#0c7ff2] transition-colors"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo6JQ_OJUl_-EhMu2pVf2N3tp4nlr1V5UH-sYTRze-zk2hp4vW-5di_bwA4PSdsdk974SO1uAtSl_rrws7be0p7O4H_XHaEN-W6U_J6lm-tcVGhT8T0ygCoaByp2ibNq6PGycVE5qGdNC-pSPkLzkWbRwBgSPINMXw1tior737CSB2-cewa8a6t7lAjGqw7bAGW9dQw_ZWCXFUyg4j0XWKO4EQ_5n1FUUr-cK9pgWqfvRrlaQN6eNscDadc29gX4j3iv_sizTQGg");'
+                    ></div>
+                    <div>
+                      <p
+                        class="text-white text-lg font-semibold leading-tight"
+                      >
+                        Ava Harper
+                      </p>
+                      <p
+                        class="text-slate-400 text-sm font-normal leading-normal"
+                      >
+                        UX/UI Designer | User-Centric
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="text-xs text-slate-400 mb-0.5">Match</p>
+                    <p class="text-2xl font-bold text-yellow-500">65%</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Figma</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >User Research</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Prototyping</span
+                  >
+                  <span
+                    class="text-xs font-medium bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full"
+                    >Wireframing</span
+                  >
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-300 mb-1">
+                    Highlights:
+                  </h4>
+                  <ul
+                    class="list-disc list-inside text-slate-400 text-sm space-y-1 pl-1"
+                  >
+                    <li>Redesigned an app, boosting user satisfaction.</li>
+                    <li>Experienced in responsive web design.</li>
+                  </ul>
+                </div>
+                <div class="flex gap-3 mt-2">
+                  <button
+                    class="flex-1 flex items-center justify-center gap-2 min-w-[84px] cursor-pointer overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] hover:bg-[#0a69c4] text-white text-sm font-medium leading-normal transition-colors"
+                  >
+                    <i class="material-icons text-lg">person</i>
+                    <span class="truncate">View Profile</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+                    title="Shortlist Candidate"
+                  >
+                    <i class="material-icons text-lg">bookmark_border</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center p-4 mt-8">
+              <a
+                class="flex size-10 items-center justify-center rounded-md text-slate-400 hover:text-white hover:bg-[#1f242c] transition-colors"
+                href="#"
+              >
+                <i class="material-icons text-xl">chevron_left</i>
+              </a>
+              <a
+                class="text-sm font-bold leading-normal flex size-10 items-center justify-center text-white rounded-md bg-[#0c7ff2]"
+                href="#"
+                >1</a
+              >
+              <a
+                class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-slate-300 hover:text-white hover:bg-[#1f242c] rounded-md transition-colors"
+                href="#"
+                >2</a
+              >
+              <a
+                class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-slate-300 hover:text-white hover:bg-[#1f242c] rounded-md transition-colors"
+                href="#"
+                >3</a
+              >
+              <span
+                class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-slate-500"
+                >...</span
+              >
+              <a
+                class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-slate-300 hover:text-white hover:bg-[#1f242c] rounded-md transition-colors"
+                href="#"
+                >8</a
+              >
+              <a
+                class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-slate-300 hover:text-white hover:bg-[#1f242c] rounded-md transition-colors"
+                href="#"
+                >9</a
+              >
+              <a
+                class="flex size-10 items-center justify-center rounded-md text-slate-400 hover:text-white hover:bg-[#1f242c] transition-colors"
+                href="#"
+              >
+                <i class="material-icons text-xl">chevron_right</i>
+              </a>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="px-10 py-6 border-t border-solid border-slate-800 text-center"
+        >
+          <p class="text-sm text-slate-500">
+            © 2024 KnowTruly.me. All rights reserved.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-[#111418]">
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
+      style="
+        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(156,171,186)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+        font-family: Inter, 'Noto Sans', sans-serif;
+      "
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2A323B] px-10 py-4 shadow-sm"
+        >
+          <div class="flex items-center gap-3 text-white">
+            <div class="size-5 text-[#0c7ff2]">
+              <svg
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-white text-xl font-bold leading-tight tracking-[-0.015em]"
+            >
+              KnowTruly.me
+            </h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-6">
+            <nav class="flex items-center gap-6">
+              <a
+                class="text-sm font-medium leading-normal text-slate-300 hover:text-white transition-colors"
+                href="#"
+                >Dashboard</a
+              >
+              <a
+                class="text-sm font-medium leading-normal text-white hover:text-slate-300 transition-colors"
+                href="#"
+                >Resume</a
+              >
+              <a
+                class="text-sm font-medium leading-normal text-slate-300 hover:text-white transition-colors"
+                href="#"
+                >Portfolio</a
+              >
+              <a
+                class="text-sm font-medium leading-normal text-slate-300 hover:text-white transition-colors"
+                href="#"
+                >Jobs</a
+              >
+            </nav>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#2A323B] text-slate-300 hover:text-white transition-colors"
+            >
+              <div class="text-inherit" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg
+                  fill="currentColor"
+                  height="20px"
+                  viewBox="0 0 256 256"
+                  width="20px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0c7ff2]"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1-JFW-ZISvGoL79NYiWUPgZYk5CFjzcUQEMrsrBYgs0PY8Q-22pyL4v4IwOyZXT3siYTGo78h8iHydrrbf44RQYaGtvjFJdZw16JDug-seG_FRhqhWhbiiSSfhxMHER8yz4Q8fFPeEVpUB44HHH2Xg49fq7-eozW8O6E6B-_mBQUIW4Oym-pUfEmqwPL6yz0AEYRpGXWH575sn5bsZ1kLOKpfq-xa1-EgZvRUXVK01PCIOVjSmHFh77aJ7RFBTdfilO3w3XNFMg");'
+            ></div>
+          </div>
+        </header>
+        <main class="flex-1 grid grid-cols-[360px_1fr] gap-0">
+          <aside class="flex flex-col border-r border-[#2A323B] bg-[#181C20]">
+            <div class="p-6">
+              <h3
+                class="text-white text-2xl font-bold leading-tight tracking-tight"
+              >
+                Resume Editor
+              </h3>
+            </div>
+            <div class="border-b border-[#2A323B]">
+              <div class="flex px-6 gap-6">
+                <a
+                  class="flex flex-col items-center justify-center border-b-2 border-b-[#0c7ff2] text-white pb-3 pt-2"
+                  href="#"
+                >
+                  <p class="text-sm font-semibold leading-normal">Chat</p>
+                </a>
+                <a
+                  class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-slate-400 hover:text-white transition-colors pb-3 pt-2"
+                  href="#"
+                >
+                  <p class="text-sm font-semibold leading-normal">Manual</p>
+                </a>
+              </div>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6 space-y-6">
+              <div class="flex items-end gap-3">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8 shrink-0"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrusnpyF8Pt1jWL8dBcArXnHddNb4vJHuMF54dp5YpHUzbyBvCsL_J0YmGA72e9FEhbCO4TSkEvFySpXY3RCPlBi5wwQRDW3XvAhTzT2uGhsSmmQv8-7Lg_SfdPjhONFjT0NJDjnCrFhhrcSsW_mWaYF8H0yHRhEsBBJyhjT6Dkz41doH0by532ofyBRzJkxYo7JQBlc8wfOUFffo5x3cnilF5C-Hoy_Kq6LsJrzo6ZkPgpnIKQniaQntbMRbdVfUSWbaWlz5DSg");'
+                ></div>
+                <div class="flex flex-1 flex-col gap-1.5 items-start">
+                  <p class="text-slate-400 text-xs font-medium leading-normal">
+                    AI Assistant
+                  </p>
+                  <p
+                    class="text-sm font-normal leading-relaxed rounded-lg px-3.5 py-2.5 bg-[#2A323B] text-slate-100"
+                  >
+                    Hi Sarah, let's refine your resume. What's your current
+                    role?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="sticky bottom-0 bg-[#181C20] py-3 -mx-6 px-6 border-t border-[#2A323B]"
+              >
+                <div class="flex items-center gap-2 @container">
+                  <label class="flex flex-col h-11 flex-1">
+                    <div
+                      class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm"
+                    >
+                      <input
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border-none bg-[#2A323B] focus:border-none h-full placeholder:text-slate-400 px-3.5 text-sm font-normal leading-normal"
+                        placeholder="Type your message..."
+                        value=""
+                      />
+                    </div>
+                  </label>
+                  <button
+                    class="flex items-center justify-center p-2.5 rounded-lg text-slate-400 hover:bg-[#2A323B] hover:text-white transition-colors"
+                  >
+                    <div
+                      data-icon="Microphone"
+                      data-size="20px"
+                      data-weight="regular"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="20px"
+                        viewBox="0 0 256 256"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V232a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                  <button
+                    class="min-w-[72px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-[#0c7ff2] text-white text-sm font-semibold leading-normal hover:bg-blue-600 transition-colors shadow-sm"
+                  >
+                    <span class="truncate">Send</span>
+                  </button>
+                </div>
+              </div>
+              <div class="space-y-5 pt-2">
+                <label class="flex flex-col">
+                  <p
+                    class="text-slate-200 text-sm font-medium leading-normal pb-2"
+                  >
+                    Job Title
+                  </p>
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-[#323B45] bg-[#1F242A] focus:border-[#0c7ff2] h-11 placeholder:text-slate-400 p-3 text-sm font-normal leading-normal shadow-sm"
+                    value=""
+                  />
+                </label>
+                <label class="flex flex-col">
+                  <p
+                    class="text-slate-200 text-sm font-medium leading-normal pb-2"
+                  >
+                    Company
+                  </p>
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-[#323B45] bg-[#1F242A] focus:border-[#0c7ff2] h-11 placeholder:text-slate-400 p-3 text-sm font-normal leading-normal shadow-sm"
+                    value=""
+                  />
+                </label>
+                <label class="flex flex-col">
+                  <p
+                    class="text-slate-200 text-sm font-medium leading-normal pb-2"
+                  >
+                    Description
+                  </p>
+                  <textarea
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-[#323B45] bg-[#1F242A] focus:border-[#0c7ff2] min-h-32 placeholder:text-slate-400 p-3 text-sm font-normal leading-normal shadow-sm"
+                  ></textarea>
+                </label>
+              </div>
+              <div>
+                <h3
+                  class="text-white text-lg font-semibold leading-tight tracking-tight pt-4 pb-3"
+                >
+                  Customize
+                </h3>
+                <div class="space-y-4">
+                  <label class="flex flex-col">
+                    <p
+                      class="text-slate-200 text-sm font-medium leading-normal pb-2"
+                    >
+                      Template
+                    </p>
+                    <select
+                      class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-[#323B45] bg-[#1F242A] focus:border-[#0c7ff2] h-11 bg-[image:--select-button-svg] bg-right_1rem_center bg-no-repeat bg-[length:1.25em] placeholder:text-slate-400 p-3 text-sm font-normal leading-normal shadow-sm"
+                    >
+                      <option class="text-slate-400" value="">
+                        Select a template
+                      </option>
+                      <option class="text-slate-100" value="modern">
+                        Modern
+                      </option>
+                      <option class="text-slate-100" value="classic">
+                        Classic
+                      </option>
+                      <option class="text-slate-100" value="creative">
+                        Creative
+                      </option>
+                    </select>
+                  </label>
+                  <label class="flex flex-col">
+                    <p
+                      class="text-slate-200 text-sm font-medium leading-normal pb-2"
+                    >
+                      Style
+                    </p>
+                    <select
+                      class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-2 focus:ring-[#0c7ff2] border border-[#323B45] bg-[#1F242A] focus:border-[#0c7ff2] h-11 bg-[image:--select-button-svg] bg-right_1rem_center bg-no-repeat bg-[length:1.25em] placeholder:text-slate-400 p-3 text-sm font-normal leading-normal shadow-sm"
+                    >
+                      <option class="text-slate-400" value="">
+                        Choose a style
+                      </option>
+                      <option class="text-slate-100" value="minimalist">
+                        Minimalist
+                      </option>
+                      <option class="text-slate-100" value="bold">Bold</option>
+                      <option class="text-slate-100" value="elegant">
+                        Elegant
+                      </option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="flex pt-4 justify-end">
+                <button
+                  class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] text-white text-sm font-semibold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-md"
+                >
+                  <span class="truncate">Save Changes</span>
+                </button>
+              </div>
+            </div>
+          </aside>
+          <section class="flex flex-col bg-[#111418] p-6 @container">
+            <div class="flex-1 flex items-center justify-center">
+              <div
+                class="w-full max-w-3xl aspect-[1/1.414] bg-white rounded-lg shadow-2xl overflow-hidden"
+              >
+                <div
+                  class="bg-center bg-no-repeat bg-cover w-full h-full"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkEsRnlWAON0A2yfWd9fa1caXZpQW8lcxhLopy0nccxiBXYp4r1e7QKqciKaviisxTMR9ofrNGV5TgNUvMeVJvVbuB9WHPRJNT_uIcvtPWgQLXhEh7PkUqBbAHWFq4HF9h2N2UZnCsFcJr3Jqm78JIYvCqbnpZ6f9SxX0rzpgpKlYlKPqMsLywAyLbSR2HGMcQEWAgZ-WiwP6EFjTmoWWXbVtoxbSCCLQ0URq2oFpvzilo5rpfLIJ94prkeN5sVq_f0UwXFpmWag");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex justify-center items-center gap-4 pt-6">
+              <button
+                class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:bg-[#2A323B] hover:text-white transition-colors text-sm font-medium"
+              >
+                <svg
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+                Download PDF
+              </button>
+              <button
+                class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:bg-[#2A323B] hover:text-white transition-colors text-sm font-medium"
+              >
+                <svg
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"
+                  ></path>
+                  <path d="m15 5 4 4"></path>
+                </svg>
+                Edit Sections
+              </button>
+              <button
+                class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:bg-[#2A323B] hover:text-white transition-colors text-sm font-medium"
+              >
+                <svg
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect height="18" rx="2" width="18" x="3" y="3"></rect>
+                  <path d="M8 12h8"></path>
+                  <path d="M12 8v8"></path>
+                </svg>
+                Add Section
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

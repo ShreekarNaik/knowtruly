@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <title>KnowTruly.me - Find Candidates</title>
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <style>
+      .material-icons-sharp {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body
+    class="bg-[#111418] text-white"
+    style='font-family: Inter, "Noto Sans", sans-serif'
+  >
+    <div
+      class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+    >
+      <header
+        class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] bg-[#111418]/80 px-6 py-3 backdrop-blur-md sm:px-10"
+      >
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3 text-white">
+            <svg
+              class="size-6 text-[#0c7ff2]"
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <h1
+              class="text-xl font-bold leading-tight tracking-[-0.015em]"
+            >
+              KnowTruly.me
+            </h1>
+          </div>
+          <nav class="hidden items-center gap-6 md:flex">
+            <a
+              class="hover:text-[#0c7ff2] text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-[#0c7ff2] text-sm font-bold leading-normal"
+              href="#"
+              >Candidates</a
+            >
+            <a
+              class="hover:text-[#0c7ff2] text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Jobs</a
+            >
+            <a
+              class="hover:text-[#0c7ff2] text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Company</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-lg h-full"
+            >
+              <div
+                class="text-[#9cabba] flex border-none bg-[#283039] items-center justify-center pl-3 rounded-l-lg border-r-0"
+              >
+                <span class="material-icons-sharp text-xl">search</span>
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#283039] focus:border-none h-full placeholder:text-[#9cabba] px-3 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal"
+                placeholder="Search..."
+                value=""
+              />
+            </div>
+          </label>
+          <button
+            aria-label="Notifications"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#283039] text-white transition-colors hover:bg-[#3b4754]"
+          >
+            <span class="material-icons-sharp text-xl">notifications</span>
+          </button>
+          <button aria-label="User Profile">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0c7ff2]"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEBYM3_QKxHJuhMt5Dlnp-84-k6uj76TwEU7RUP_HOh7YKOH_9q6MWKJFowHYMxuFNKdZrTLj4UClckjiEa0Grbs4jImlw6DvRUBh8FDNz1KGe707apQquBoqTmJHLG_UATrFgaaRvugQZaf-JmZpBvoyJxatsRgFW8aFDrJcHRUJ4gor-T0dpk0N5rjekOvlvvugjYvOiPUp7XCmpi-0FsxW5bPkV_CZ5-xguJ2PIogBLANFlQbh2xDQGha7yABME9wh3eievhQ");'
+            ></div>
+          </button>
+        </div>
+      </header>
+      <main class="flex flex-1 justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <div class="w-full max-w-4xl">
+          <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+              Discover Top Talent
+            </h2>
+            <p class="text-[#9cabba] mt-2 text-base leading-normal sm:text-lg">
+              Use our AI-powered search to find candidates matching your
+              specific criteria.
+            </p>
+          </div>
+          <div
+            class="mb-6 rounded-xl bg-[#1a1f25] p-4 shadow-xl sm:p-6"
+          >
+            <div class="relative">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
+              >
+                <span class="material-icons-sharp text-[#9cabba]"
+                  >search</span
+                >
+              </div>
+              <input
+                class="form-input w-full rounded-lg border-0 bg-[#283039] py-3.5 pl-12 pr-12 text-base text-white placeholder:text-[#9cabba] focus:ring-2 focus:ring-[#0c7ff2]"
+                placeholder="Type your query (e.g., 'frontend developer with React and 3 years experience')"
+                type="text"
+                value="Software Engineer with 5+ years of experience in web development"
+              />
+              <button
+                aria-label="Clear search"
+                class="absolute inset-y-0 right-0 flex items-center pr-4 text-[#9cabba] transition-colors hover:text-white"
+              >
+                <span class="material-icons-sharp">close</span>
+              </button>
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="text-sm text-[#9cabba]">Applied Filters:</span>
+              <div
+                class="flex h-8 items-center gap-x-1.5 rounded-full bg-[#0c7ff2]/20 px-3 py-1 text-xs font-medium text-[#0c7ff2]"
+              >
+                <span class="material-icons-sharp text-sm">code</span>
+                <span>Skills: Web Development</span>
+              </div>
+              <div
+                class="flex h-8 items-center gap-x-1.5 rounded-full bg-[#0c7ff2]/20 px-3 py-1 text-xs font-medium text-[#0c7ff2]"
+              >
+                <span class="material-icons-sharp text-sm"
+                  >work_history</span
+                >
+                <span>Experience: 5+ years</span>
+              </div>
+              <div
+                class="flex h-8 items-center gap-x-1.5 rounded-full bg-[#0c7ff2]/20 px-3 py-1 text-xs font-medium text-[#0c7ff2]"
+              >
+                <span class="material-icons-sharp text-sm"
+                  >business_center</span
+                >
+                <span>Industry: Technology</span>
+              </div>
+              <div
+                class="flex h-8 items-center gap-x-1.5 rounded-full bg-[#0c7ff2]/20 px-3 py-1 text-xs font-medium text-[#0c7ff2]"
+              >
+                <span class="material-icons-sharp text-sm">public</span>
+                <span>Location: Remote</span>
+              </div>
+              <button
+                class="ml-auto text-xs text-[#9cabba] underline hover:text-white"
+              >
+                Clear All
+              </button>
+            </div>
+          </div>
+          <div class="mb-6 flex items-center justify-between">
+            <h3
+              class="text-xl font-semibold leading-tight tracking-[-0.015em]"
+            >
+              Search Results
+            </h3>
+            <div class="flex items-center gap-2">
+              <button
+                class="flex h-9 items-center justify-center gap-2 rounded-md bg-[#283039] px-3 text-sm font-medium text-white transition-colors hover:bg-[#3b4754]"
+              >
+                <span class="material-icons-sharp text-lg">sort</span>
+                Sort
+              </button>
+              <button
+                class="flex h-9 items-center justify-center gap-2 rounded-md bg-[#283039] px-3 text-sm font-medium text-white transition-colors hover:bg-[#3b4754]"
+              >
+                <span class="material-icons-sharp text-lg"
+                  >filter_list</span
+                >
+                Filter
+              </button>
+              <button
+                class="flex h-9 items-center justify-center gap-2 rounded-md bg-[#0c7ff2] px-3 text-sm font-bold text-white transition-colors hover:bg-[#0a69c3]"
+              >
+                <span class="material-icons-sharp text-lg"
+                  >bookmark_border</span
+                >
+                Save Search
+              </button>
+            </div>
+          </div>
+          <div class="border-b border-[#3b4754]">
+            <nav aria-label="Tabs" class="-mb-px flex space-x-6">
+              <a
+                aria-current="page"
+                class="whitespace-nowrap border-b-2 border-[#0c7ff2] px-1 py-3 text-sm font-semibold text-[#0c7ff2]"
+                href="#"
+              >
+                All Candidates (250)
+              </a>
+              <a
+                class="whitespace-nowrap border-b-2 border-transparent px-1 py-3 text-sm font-medium text-[#9cabba] hover:border-gray-300 hover:text-gray-200"
+                href="#"
+              >
+                Recommended (50)
+              </a>
+              <a
+                class="whitespace-nowrap border-b-2 border-transparent px-1 py-3 text-sm font-medium text-[#9cabba] hover:border-gray-300 hover:text-gray-200"
+                href="#"
+              >
+                Saved (10)
+              </a>
+            </nav>
+          </div>
+          <div class="mt-6 grid gap-6">
+            <div
+              class="flex flex-col gap-4 rounded-xl bg-[#1a1f25] p-5 shadow-lg transition-all hover:shadow-2xl sm:flex-row sm:items-start"
+            >
+              <div
+                class="h-24 w-24 flex-shrink-0 rounded-full bg-cover bg-center sm:h-28 sm:w-28"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgSqEQ4VXjOuRF8KoeJHuetelX66OygGEyzWurpLu57K3kiIWU0BzCysv0RCdsOpY0Oc-AFzGVpgCv5NcadjCtXxC2774rUOXCfjeScJ8AmHJwYPM4z3XwsXwQSm3kgFLKepKHJ8QvJ8QCxTdsGgPTnnDOyJOUsOgMUonlTKkRb5HEtJ6NAmgD-yjV3ocLsmJtlBJWEVfH9Rq7wXxh-oqiQUYDVkrctBcXH4cm_XNlcVw0lT-HPw7C9iuxu4Jb--qmPuC2D-2ANA");'
+              ></div>
+              <div class="flex-grow">
+                <h4 class="text-lg font-semibold text-white">
+                  Sophia Carter
+                </h4>
+                <p class="text-sm text-[#9cabba]">
+                  Software Engineer at Tech Innovators Inc.
+                </p>
+                <p class="mt-1 text-xs text-gray-400">5+ years experience</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >React</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >Node.js</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+              <button
+                class="mt-4 w-full shrink-0 rounded-lg bg-[#0c7ff2] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0a69c3] sm:ml-auto sm:mt-0 sm:w-auto"
+              >
+                View Profile
+              </button>
+            </div>
+            <div
+              class="flex flex-col gap-4 rounded-xl bg-[#1a1f25] p-5 shadow-lg transition-all hover:shadow-2xl sm:flex-row sm:items-start"
+            >
+              <div
+                class="h-24 w-24 flex-shrink-0 rounded-full bg-cover bg-center sm:h-28 sm:w-28"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvqy0R5TBL3TeUNSRpGpsNqDYqXl2BY5bm3X38j2MrALabbVeXKyk-1_QTtj3yMc4kFdcQyg84f9L9VHK-RmiEVRxSRpGqe3SYM0CBD0yoamSgZi-PrARTjS3eNihuW8vPFlGQqe1MpxYFVSxKeC_iVDr0ij5SEsZ8CnGjeRGy6ze934lRnMtpjRnDmO_3VvuK4Jg5m6mVXefG6u2nDCWn7uhM7GH8uG2FUu8h2Jk4E3tBfFQuhfEEwQYG7ItdXpucFNkR6Iubtw");'
+              ></div>
+              <div class="flex-grow">
+                <h4 class="text-lg font-semibold text-white">
+                  Ethan Bennett
+                </h4>
+                <p class="text-sm text-[#9cabba]">
+                  Senior Web Developer at Digital Solutions Co.
+                </p>
+                <p class="mt-1 text-xs text-gray-400">7+ years experience</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >Angular</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >GraphQL</span
+                  >
+                </div>
+              </div>
+              <button
+                class="mt-4 w-full shrink-0 rounded-lg bg-[#0c7ff2] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0a69c3] sm:ml-auto sm:mt-0 sm:w-auto"
+              >
+                View Profile
+              </button>
+            </div>
+            <div
+              class="flex flex-col gap-4 rounded-xl bg-[#1a1f25] p-5 shadow-lg transition-all hover:shadow-2xl sm:flex-row sm:items-start"
+            >
+              <div
+                class="h-24 w-24 flex-shrink-0 rounded-full bg-cover bg-center sm:h-28 sm:w-28"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBopuxGZA7fpZyspyYhMw6K66mQQXtBS4M-OVNhIgGfnQVxbYW1vVMHjDeOMX8Pt25XGFLMEhvbd_OtntMPqKiBApJAGH23Eiu0uk4-l1vkCOLgc8RcBL1Y-o8A10orV5nabDVSFQ2FC6pSI77ePv7cKyXv_Eqka7R_vAnGpAYXVu6vf6eIalyMV2qG6eBlR5PXU4GKJtpMV41RqVM-DfFQ_G4fVo1qynzi3VBncsRSM1mswX2uLpP_d0MNrdcIe2HuL_dyqIzAYQ");'
+              ></div>
+              <div class="flex-grow">
+                <h4 class="text-lg font-semibold text-white">
+                  Olivia Hayes
+                </h4>
+                <p class="text-sm text-[#9cabba]">
+                  Full-Stack Developer at Creative Tech Group
+                </p>
+                <p class="mt-1 text-xs text-gray-400">4+ years experience</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >Python</span
+                  >
+                  <span
+                    class="rounded-full bg-[#283039] px-2.5 py-0.5 text-xs text-gray-300"
+                    >Django</span
+                  >
+                </div>
+              </div>
+              <button
+                class="mt-4 w-full shrink-0 rounded-lg bg-[#0c7ff2] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0a69c3] sm:ml-auto sm:mt-0 sm:w-auto"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <nav
+            aria-label="Pagination"
+            class="mt-8 flex items-center justify-center"
+          >
+            <a
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#3b4754] bg-[#283039] text-sm font-medium text-gray-400 hover:bg-[#3b4754] hover:text-white"
+              href="#"
+            >
+              <span class="sr-only">Previous</span>
+              <span class="material-icons-sharp text-lg"
+                >chevron_left</span
+              >
+            </a>
+            <a
+              aria-current="page"
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0c7ff2] bg-[#0c7ff2] text-sm font-medium text-white"
+              href="#"
+            >
+              1
+            </a>
+            <a
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#3b4754] bg-[#283039] text-sm font-medium text-gray-400 hover:bg-[#3b4754] hover:text-white"
+              href="#"
+            >
+              2
+            </a>
+            <a
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#3b4754] bg-[#283039] text-sm font-medium text-gray-400 hover:bg-[#3b4754] hover:text-white"
+              href="#"
+            >
+              3
+            </a>
+            <span
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center text-sm font-medium text-gray-400"
+              >...</span
+            >
+            <a
+              class="mr-2 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#3b4754] bg-[#283039] text-sm font-medium text-gray-400 hover:bg-[#3b4754] hover:text-white"
+              href="#"
+            >
+              10
+            </a>
+            <a
+              class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#3b4754] bg-[#283039] text-sm font-medium text-gray-400 hover:bg-[#3b4754] hover:text-white"
+              href="#"
+            >
+              <span class="sr-only">Next</span>
+              <span class="material-icons-sharp text-lg"
+                >chevron_right</span
+              >
+            </a>
+          </nav>
+        </div>
+      </main>
+      <footer
+        class="border-t border-[#283039] bg-[#111418] py-8 text-center"
+      >
+        <p class="text-sm text-[#9cabba]">
+          © 2023 KnowTruly.me. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
