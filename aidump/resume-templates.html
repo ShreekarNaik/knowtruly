@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KnowTruly.me - Resume Templates</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans:wght@400;500;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      .card-hover-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+          0 0 15px rgba(12, 127, 242, 0.5);
+      }
+      .btn-primary {
+        background-color: #0c7ff2;
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: #0a68c4;
+      }
+      .nav-link-active {
+        color: #0c7ff2;
+        border-bottom: 2px solid #0c7ff2;
+        padding-bottom: 4px;
+      }
+      .filter-btn-active {
+        background-color: #0c7ff2;
+        color: white;
+      }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-[#111418]" style='font-family: Inter, "Noto Sans", sans-serif'>
+    <div
+      class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] bg-[#111418]/80 px-6 py-4 backdrop-blur-md sm:px-10"
+        >
+          <div class="flex items-center gap-3 text-white sm:gap-4">
+            <div class="size-6 text-[#0c7ff2]">
+              <svg
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-white text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em]"
+            >
+              KnowTruly.me
+            </h2>
+          </div>
+          <nav class="hidden items-center gap-6 md:flex lg:gap-8">
+            <a
+              class="text-[#c7d2fe] hover:text-white text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="text-white nav-link-active text-sm font-semibold leading-normal"
+              href="#"
+              >Templates</a
+            >
+            <a
+              class="text-[#c7d2fe] hover:text-white text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >AI Resume Builder</a
+            >
+            <a
+              class="text-[#c7d2fe] hover:text-white text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Career Paths</a
+            >
+            <a
+              class="text-[#c7d2fe] hover:text-white text-sm font-medium leading-normal transition-colors"
+              href="#"
+              >Resources</a
+            >
+          </nav>
+          <div class="flex items-center gap-3 sm:gap-4">
+            <button
+              class="btn-primary flex min-w-[90px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 text-sm font-semibold leading-normal tracking-[0.015em] transition-colors"
+            >
+              <span class="truncate">Upgrade</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0c7ff2]"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-lUgRqEfNlqD3KroTjsxtMGqsFOIY1SfkS5PqWMeQ6en9cT0iSo7FPu5Kfb3Sow_dRDa0Oc8_2HnnHRSKlfYDcoaX60muyzxR22YTSgofLdNlAu1Ok5shdEIRPC3kGM_Zgi5dKvNE6gLAJeLR6nswhE65r12Ida-dSDwZjePvX7aHVsBfG6LVJOFhqTeDPz787QACMVioigWh7_t4q7fCfV0yOSGfzsECKw2E7tT6-mv8LHKgQqZL_wmELY50n5ZVaK94qCZe2g");'
+            ></div>
+            <button class="md:hidden text-white">
+              <span class="material-icons-outlined">menu</span>
+            </button>
+          </div>
+        </header>
+        <main
+          class="flex flex-1 justify-center px-4 py-8 sm:px-10 sm:py-12 lg:px-20 xl:px-40"
+        >
+          <div
+            class="layout-content-container flex w-full max-w-7xl flex-col"
+          >
+            <div
+              class="mb-8 flex flex-col items-start justify-between gap-4 p-4 sm:flex-row sm:items-center"
+            >
+              <div class="flex flex-col gap-2">
+                <h1
+                  class="text-white text-3xl sm:text-4xl font-bold leading-tight tracking-tight"
+                >
+                  Resume Templates
+                </h1>
+                <p
+                  class="text-[#9cabba] text-sm sm:text-base font-normal leading-normal max-w-xl"
+                >
+                  Choose a template that best represents your skills and
+                  experience. Filter by style and theme to find the perfect
+                  match.
+                </p>
+              </div>
+            </div>
+            <div class="mb-8 px-4">
+              <h3
+                class="text-white text-xl font-semibold leading-tight tracking-[-0.015em] mb-4"
+              >
+                Filters
+              </h3>
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[#283039] pl-4 pr-3 text-sm font-medium text-white transition-colors hover:bg-[#3a4450]"
+                >
+                  Style
+                  <span class="material-icons-outlined text-lg"
+                    >expand_more</span
+                  >
+                </button>
+                <button
+                  class="filter-btn-active flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[#283039] pl-4 pr-3 text-sm font-medium text-white transition-colors hover:bg-[#3a4450]"
+                >
+                  Theme: Tech
+                  <span class="material-icons-outlined text-lg"
+                    >expand_more</span
+                  >
+                </button>
+                <button
+                  class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[#283039] pl-4 pr-3 text-sm font-medium text-white transition-colors hover:bg-[#3a4450]"
+                >
+                  Industry
+                  <span class="material-icons-outlined text-lg"
+                    >expand_more</span
+                  >
+                </button>
+                <button
+                  class="flex h-10 items-center justify-center gap-x-1 rounded-lg px-3 text-sm font-medium text-[#9cabba] transition-colors hover:text-white"
+                >
+                  Clear All
+                  <span class="material-icons-outlined text-lg"
+                    >close</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-6 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            >
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Modern Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY1sgVTnXGpXHbu8QgWdGE7sF6IpIgVoM3t6RWdRbbEtSmBnwqodKO0LRQ1yAI-QbFNHHYKOgoyaE7GaH2_-gOvF26Q1lUQ_IcooaMbqbCbtHsecDO4MMI7KRfuub-CiYi8CsXpGama4H4id8frIyzAkwmmBBmg1CNAZkyqhWmZjLUBlO7ohrcHqSQHo8KRt18JrBKGPkP4XcP0MkbykkNuEw8jWdhaOYRjeiMhYPy_3HvSXSHBPY4j_ib46N1B-a399tvKkDEPQ"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Modern Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    A sleek and contemporary design for a modern professional.
+                    Emphasizes clean lines and readability.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Minimalist Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-9UgbBsB_jLdwLhvuH_8ZjAMBeaZiW6759jMnOFozrHBLzMoohjkPHDdHkHjl-0FLNK5wj4sbhYMZav4rzBjzrOWLdPInUYjvhprm8eyoDwMJrp_HiZmUF1558A4wAoTc9tyjgo6X-GU0-AsfEuKb-lYi37z1tBSsQ5nJ3qT-VEpXDwkc2echWgc1UCtnF7BmULDuK-qpJ17Pma5PupyToOMLwX3-0sQKRVm8uN1vDN8UI07uO7X8iAUJUyCNa3xJJnjxe5JDSiw"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Minimalist Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    A clean and simple layout emphasizing clarity and
+                    conciseness. Perfect for straightforward applications.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Creative Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2bXI65tH4PlANsEUvgdtffCyfoFcmGZHe4Nl_tYqKH3Dex97PvktMznzGmopfSW4naiKfdH8sKCgqnl8PmDVdH97BhkEH-91GCbVzfsGLa-0OALQVaGg5VPzF5-CPPNy9SYXzyz55x01zx7JVUyLcs4njU7T8HCdem1OH8L0b-GY7EEn_0SsnVkmyGN-EPNsEeP8UNICfN8w7fOcjUlSdkLrnVbC7XPjCEI82hOK3I-WiPNvTm6uelZo9cbZOd0r3QB8-cbMh2A"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Creative Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    An eye-catching design for creative roles and industries.
+                    Showcase your unique personality.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Tech-Focused Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEGU_vbNuE04KKpLyXLPg92oP-1181PPtyifS2HvcLJAe1iax-OmDEIVeJIjt4xBKPTEaOg2cx4H5RwahBFETtfF87yaKOSyu-z_NrVKySEQvoDaSSRDGXSkMlSNVG9HOI7fTSRwRad2WniFcBRUe-mD5EckmQFx-3KHVTK0kbxgdYZgYsXQ4gw_Bm9kL8c4umBtlQZlvDW7w2zUxtJdtsq8VCl7N1V3UFnSXdIwfrvJUZZXx2e1ABo3ymyKIfpstiPZDGs_fBEA"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Tech-Focused Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    Tailored for tech professionals, highlighting technical
+                    skills and projects. Includes dedicated sections for
+                    coding languages.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Business-Oriented Resume"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnYxJX1YfBICiT8Kj-Ww6FOEFT1iCanQc1zmQLbunzvQQEctnB60bE9mSXFgynGDS6OmzCuMIH8bMrj5qtTD7zZzs4Dqkxtzh5goXlx8gs_5nSPg4cSCbmStg0i1D8NkDtbMGIZOSDJtFmlVwsBGStwEFJeqQF0qbsIMODdXqtzbW2v6ovr_XC5fhVgCJrap5kb7As56Z5Qb2DlhTmrYOCl9LNq_I0aYTPxGR3B29s5vJHn1a_y7PGsNYUHvljEv2wBZrBU2Pq_w"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Business-Oriented Resume
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    Designed for business professionals, emphasizing
+                    leadership and achievements. Ideal for corporate roles.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Academic Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuGFv3-7CaRM1VJOJsiHef33UTSUvEv3bffIiusrhzzQY-zy6-83hGpbjlOU2gm6Ew7yrJjoUOReixRF-oo_ml5LRacyjP7kfGSf6Z_x3U7BH04NO0pxJbttU0F-QPuSiI8WyPyfjLZw1r2Yqk8_xlVPDeD16SZJzL51meQAUbu2SkaI9M3SLpr2auhtiEztL0jQL61qYOSPBcuX_MTpgIT8x4yIhaCA3JTIzcL1BBXRsQj3a8IH2NprjKr86l-X99ZaFCRWn-_w"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Academic Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    Suitable for academics, showcasing research, publications,
+                    and educational background. CV-style format.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Professional Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoUTJquoKyiNB_S7AkZ7qw-vywFtB5GP3qOkp3YdOi7c-czaFKp1J5HVDswLEFFjFZBM5_kILWbmI0APy-c7eWA_3NZeQUOdjerel-BzUNiTAU9_mpXb70XQuc-pV1temnTQi-1ZFrU8G10c-lqeCNK2pnJ81XrYb09d8Tf1-P0w5_xrivIa2P0UGjUjiX9iHyNokVUBLY_jfjMLz0ZDOZE1xTLN_bZ_p1IWy8CZBiyH11kImx155Q6P7pjnU_bdXHMy2UKmEAgg"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Professional Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    A versatile template for professionals across various
+                    industries. Highly adaptable and polished.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card-hover-effect group flex flex-col overflow-hidden rounded-xl border border-[#283039] bg-[#1a1e24] shadow-lg"
+              >
+                <div
+                  class="relative w-full aspect-[3/4] overflow-hidden bg-cover bg-center"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <button
+                      class="btn-primary transform rounded-lg py-2 px-4 text-sm font-semibold transition-transform duration-300 group-hover:scale-100 scale-90"
+                    >
+                      Select Template
+                    </button>
+                  </div>
+                  <img
+                    alt="Entry-Level Resume Template"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJeM3cJfPqQ8LRpbq_YlXaYwHUqbN8FJexJDkhmuinIPbWh8opTjWBCbWyOK_oqLCFgrJxXQoN0tkQNkmMV4NmrL_Juap3E16IZYNk_DRflkjNvqMmKDyDQ9vCVjyiggjpOeNJhA_uPtlG6PrQFNNMl4OZjl5fwSm3czOjf6fMZW_jGdOBVj7GPz5-VQJebCq_ixmNZ80Zaw-qPbDNvFiLqwtPGcoiwFyNV1Ak_u8t44OE81jbwI8LadaemFQZa4RSi6jp0V_fnA"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4
+                    class="mb-1 truncate text-base font-semibold leading-normal text-white"
+                  >
+                    Entry-Level Resume Template
+                  </h4>
+                  <p
+                    class="h-10 overflow-hidden text-xs font-normal leading-normal text-[#9cabba]"
+                  >
+                    Ideal for recent graduates or those with limited work
+                    experience. Focuses on skills and education.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="border-t border-solid border-t-[#283039] px-10 py-6 text-center"
+        >
+          <p class="text-[#9cabba] text-sm">
+            © 2024 KnowTruly.me. All rights reserved.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

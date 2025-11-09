@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link
+      href="data:image/x-icon;base64,"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      .progress-bar::-webkit-progress-bar {
+        background-color: #3b4754;
+      }
+      .progress-bar::-webkit-progress-value {
+        background-color: #0c7ff2;
+        transition: width 0.5s ease-in-out;
+      }
+      .progress-bar::-moz-progress-bar {
+        background-color: #0c7ff2;
+        transition: width 0.5s ease-in-out;
+      }
+      .table-action-button {
+        transition: background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+      }
+      .table-action-button:hover {
+        background-color: #0c7ff2;
+        color: white;
+      }
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background-color: #0c7ff2;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+      }
+      .nav-link:hover {
+        color: #0c7ff2;
+      }
+      .new-resume-button {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .new-resume-button:hover {
+        background-color: #0a6cce;
+        transform: translateY(-2px);
+      }
+      .resume-row:hover {
+        background-color: #1f2937;
+      }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body style='font-family: Inter, "Noto Sans", sans-serif'>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden text-neutral-200"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-700 px-10 py-4 shadow-lg bg-[#1a1f25]"
+        >
+          <div class="flex items-center gap-4">
+            <div class="size-7 text-[#0c7ff2]">
+              <svg
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">
+              KnowTruly.me
+            </h2>
+          </div>
+          <nav class="flex items-center gap-8">
+            <a
+              class="nav-link text-sm font-medium leading-normal text-neutral-300 hover:text-[#0c7ff2]"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="nav-link text-sm font-medium leading-normal text-neutral-300 hover:text-[#0c7ff2]"
+              href="#"
+              >Resume Builder</a
+            >
+            <a
+              class="nav-link text-sm font-medium leading-normal text-neutral-300 hover:text-[#0c7ff2]"
+              href="#"
+              >Portfolio</a
+            >
+            <a
+              class="nav-link text-sm font-medium leading-normal text-neutral-300 hover:text-[#0c7ff2]"
+              href="#"
+              >Career Guidance</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-[#0c7ff2] transition-colors duration-200"
+            >
+              <span class="material-icons text-xl">notifications</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#0c7ff2]"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHMF8na7mbdaQ90JKKSdsCbiarIgXzWWyr1oZ_N1BkW0GHWmvIvQNjfyvO20ldw-oMFYLZmRoJXTXCR2n39RV4Uvc1XBQCSI0SjtQqr_k27bADP2bJcVKUJEg2IIat9PsVbGeVdnBB-X9k6h_uIFW58NeCeg-TmxOftUmEYBdm0N-unSPUgZurqg9n2XRmPmJlWxKwpjq3hQTcJkXXOUlVo_9YvVBomgsuY6fS1G51EsycPwCfXpLGw2rIpCkBcCsXZSXTYcsEWQ");'
+            ></div>
+          </div>
+        </header>
+        <main
+          class="px-10 sm:px-20 lg:px-40 flex flex-1 justify-center py-10 bg-gradient-to-b from-[#111418] to-[#181d23]"
+        >
+          <div class="layout-content-container flex flex-col w-full max-w-5xl flex-1">
+            <div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-8">
+              <h1 class="text-white tracking-tight text-4xl font-bold leading-tight">
+                My Resumes
+              </h1>
+              <button
+                class="new-resume-button flex items-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-5 bg-[#0c7ff2] text-white text-sm font-semibold leading-normal shadow-md hover:shadow-lg"
+              >
+                <span class="material-icons text-lg">add_circle_outline</span>
+                <span class="truncate">New Resume</span>
+              </button>
+            </div>
+            <div
+              class="bg-[#181e25] rounded-xl shadow-2xl overflow-hidden @container"
+            >
+              <div class="px-6 py-4 border-b border-neutral-700">
+                <h3
+                  class="text-neutral-100 text-xl font-semibold leading-tight tracking-[-0.015em]"
+                >
+                  Active Resumes
+                </h3>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full min-w-[800px]">
+                  <thead class="bg-[#1f2937]">
+                    <tr>
+                      <th
+                        class="px-6 py-4 text-left text-neutral-300 text-xs font-medium uppercase tracking-wider"
+                      >
+                        Resume Title
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-neutral-300 text-xs font-medium uppercase tracking-wider"
+                      >
+                        Target Role
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-neutral-300 text-xs font-medium uppercase tracking-wider"
+                      >
+                        Last Updated
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-neutral-300 text-xs font-medium uppercase tracking-wider"
+                      >
+                        Completeness
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-neutral-300 text-xs font-medium uppercase tracking-wider w-48"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-neutral-700">
+                    <tr class="resume-row transition-colors duration-150">
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-100 text-sm font-medium"
+                      >
+                        Software Engineer Resume
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        Software Engineer
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        2024-07-26
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center gap-2">
+                          <progress
+                            class="progress-bar w-24 h-2 rounded-full appearance-none"
+                            max="100"
+                            value="75"
+                          ></progress>
+                          <p class="text-neutral-100 text-sm font-medium">
+                            75%
+                          </p>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Edit"
+                          >
+                            <span class="material-icons text-lg">edit</span>
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Preview"
+                          >
+                            <span class="material-icons text-lg"
+                              >visibility</span
+                            >
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-red-500 hover:text-red-400 hover:bg-red-900/50"
+                            title="Delete"
+                          >
+                            <span class="material-icons text-lg"
+                              >delete_outline</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="resume-row transition-colors duration-150">
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-100 text-sm font-medium"
+                      >
+                        Data Analyst Resume
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        Data Analyst
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        2024-07-20
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center gap-2">
+                          <progress
+                            class="progress-bar w-24 h-2 rounded-full appearance-none"
+                            max="100"
+                            value="50"
+                          ></progress>
+                          <p class="text-neutral-100 text-sm font-medium">
+                            50%
+                          </p>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Edit"
+                          >
+                            <span class="material-icons text-lg">edit</span>
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Preview"
+                          >
+                            <span class="material-icons text-lg"
+                              >visibility</span
+                            >
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-red-500 hover:text-red-400 hover:bg-red-900/50"
+                            title="Delete"
+                          >
+                            <span class="material-icons text-lg"
+                              >delete_outline</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="resume-row transition-colors duration-150">
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-100 text-sm font-medium"
+                      >
+                        Product Manager Resume
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        Product Manager
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-neutral-400 text-sm"
+                      >
+                        2024-07-15
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center gap-2">
+                          <progress
+                            class="progress-bar w-24 h-2 rounded-full appearance-none"
+                            max="100"
+                            value="25"
+                          ></progress>
+                          <p class="text-neutral-100 text-sm font-medium">
+                            25%
+                          </p>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Edit"
+                          >
+                            <span class="material-icons text-lg">edit</span>
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-neutral-400 hover:text-[#0c7ff2] hover:bg-neutral-700"
+                            title="Preview"
+                          >
+                            <span class="material-icons text-lg"
+                              >visibility</span
+                            >
+                          </button>
+                          <button
+                            class="table-action-button p-2 rounded-md text-red-500 hover:text-red-400 hover:bg-red-900/50"
+                            title="Delete"
+                          >
+                            <span class="material-icons text-lg"
+                              >delete_outline</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="border-t border-neutral-700 bg-[#1a1f25]">
+          <div class="max-w-5xl mx-auto px-5 py-8">
+            <div
+              class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around mb-4"
+            >
+              <a
+                class="text-neutral-400 hover:text-[#0c7ff2] text-sm font-normal leading-normal min-w-40 transition-colors duration-200"
+                href="#"
+                >Terms of Service</a
+              >
+              <a
+                class="text-neutral-400 hover:text-[#0c7ff2] text-sm font-normal leading-normal min-w-40 transition-colors duration-200"
+                href="#"
+                >Privacy Policy</a
+              >
+              <a
+                class="text-neutral-400 hover:text-[#0c7ff2] text-sm font-normal leading-normal min-w-40 transition-colors duration-200"
+                href="#"
+                >Contact Us</a
+              >
+            </div>
+            <p
+              class="text-neutral-500 text-sm font-normal leading-normal text-center"
+            >
+              © 2024 KnowTruly.me. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
