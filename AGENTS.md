@@ -26,7 +26,7 @@ This document is the **central technical reference** for AI agents and developer
 - **LLM Provider**: Google Gemini API (gemini-pro for text, text-embedding-004 for embeddings)
 - **Auth**: FastAPI-Users with JWT tokens
 - **File Storage**: Local filesystem for POC, S3-compatible for production
-- **PDF Generation**: WeasyPrint or ReportLab
+- **Resume Engine**: Typst (modern typesetting system for templates and PDF generation)
 - **API Documentation**: Auto-generated via FastAPI (Swagger UI)
 
 ### Frontend
@@ -58,9 +58,9 @@ This document is the **central technical reference** for AI agents and developer
 
 ### Phase 2: Resume Generation (PRIORITY 2)
 
-5. Template Engine with 2-3 basic templates
+5. Typst Template Engine with 2-3 basic templates (see `aidump/resume.typ` for reference)
 6. LLM Orchestration for AI rephrasing
-7. PDF rendering pipeline
+7. Typst compilation pipeline (backend service)
 
 ### Phase 3: Trust & Verification (PRIORITY 3)
 
@@ -549,7 +549,8 @@ Response: 200
       "template_id": "uuid",
       "name": "Modern Tech",
       "layout_type": "two_column",
-      "preview_url": "string"
+      "preview_url": "string",
+      "typst_file": "modern_tech.typ"
     }
   ]
 }
@@ -566,7 +567,34 @@ Response: 200
   "name": "string",
   "layout_blocks": [...],
   "field_mappings": {...},
-  "page_constraints": {...}
+  "page_constraints": {...},
+  "typst_file": "string"
+}
+```
+
+#### `POST /templates/compile`
+
+Compile Typst template with profile data (internal use by resume generation).
+
+```json
+Request:
+{
+  "template_id": "uuid",
+  "profile_data": {
+    "projects": [...],
+    "achievements": [...],
+    "positions": [...],
+    "config": {
+      "projects": ["project1", "project2"],
+      "achievements": ["ach1", "ach2"]
+    }
+  }
+}
+
+Response: 200
+{
+  "typst_source": "string",
+  "compilation_status": "ready"
 }
 ```
 
@@ -856,6 +884,12 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 UPLOAD_DIR=./uploads
 MAX_FILE_SIZE_MB=10
 
+# Typst Configuration
+TYPST_CLI_PATH=/usr/local/bin/typst
+TYPST_TEMPLATES_DIR=./backend/templates
+TYPST_OUTPUT_DIR=./backend/generated_resumes
+TYPST_TIMEOUT_SECONDS=30
+
 # Signature Service
 RSA_KEY_SIZE=2048
 SIGNATURE_ALGORITHM=RS256
@@ -997,11 +1031,18 @@ volumes:
 - **Token limits**: Monitor Gemini API quotas
 - **Fallbacks**: If rephrasing fails, return original text
 
-### For Resume Generation
+### For Resume Generation (Typst)
 
-- **Layout constraints**: Check overflow before rendering PDF
-- **Fonts**: Embed fonts in PDF for portability
-- **Accessibility**: Ensure PDF has proper structure tags
+- **Backend Processing**: Typst compilation happens on backend for consistency and control
+- **Template Structure**: Use `config` dictionary to control project/achievement order and visibility
+- **Data Injection**: Map profile data to Typst variables; use structured dictionaries for projects/achievements
+- **Compilation**: Install Typst CLI (`typst compile template.typ output.pdf`) on backend server
+- **Testing**: Test templates with sample data; verify character limits and page overflow
+- **Version Control**: Store `.typ` templates in `backend/templates/` directory
+- **Fonts**: Typst handles font embedding automatically; use system fonts or include custom fonts
+- **Error Handling**: Catch Typst compilation errors and return meaningful messages to users
+- **Performance**: Cache compiled templates; regenerate only when profile data changes
+- **Reference Template**: See `aidump/resume.typ` for implementation example with configurable sections
 
 ---
 
@@ -1162,12 +1203,14 @@ Update `PROGRESS.md` with:
 4. **Security**: For POC, basic JWT auth is fine. Plan for OAuth2 in production
 5. **Frontend State**: Use React Query for server state, Zustand for UI state
 6. **Error Handling**: Return structured error responses: `{"detail": "Error message", "error_code": "PROFILE_NOT_FOUND"}`
+7. **Typst Templates**: Backend handles all Typst compilation. Use `aidump/resume.typ` as reference. Templates are `.typ` files with configurable sections via dictionaries
 
 ---
 
 ## Version History
 
 - **v1.0** (2025-11-09): Initial AGENTS.md created with core API schemas and frontend routes
+- **v1.1** (2025-11-09): Added Typst integration for resume rendering with backend compilation approach
 
 ---
 
