@@ -36,7 +36,7 @@
   - Health check endpoint
   - Auto-generated API docs at `/api/v1/docs`
 
-#### Phase 2: Embedding Service & Vector Store (In Progress)
+#### Phase 2: Embedding Service & Vector Store ✅
 - [x] Implemented `EmbeddingService` (`app/services/embedding_service.py`):
   - Gemini API integration for text embeddings
   - Batch embedding generation with rate limiting
@@ -55,13 +55,101 @@
   - Profile schemas (`app/schemas/profile.py`)
   - Match schemas (`app/schemas/match.py`)
   - Auth schemas (`app/schemas/auth.py`)
+- [x] API Dependencies (`app/api/deps.py`):
+  - JWT token validation
+  - Current user extraction
+  - Role-based access control helpers
+- [x] Authentication Endpoints (`app/api/v1/endpoints/auth.py`):
+  - POST /auth/register - User registration with role selection
+  - POST /auth/login - JWT token issuance
+  - GET /auth/me - Current user info
+- [x] Profile Endpoints (`app/api/v1/endpoints/profiles.py`):
+  - POST /profiles - Create profile with automatic embedding
+  - GET /profiles/{id} - Retrieve profile
+  - PATCH /profiles/{id} - Update profile (version increment + re-embedding)
+  - POST /profiles/{id}/snapshots - Create immutable snapshot
+  - GET /profiles/{id}/snapshots - List all snapshots
+- [x] API Router setup (`app/api/v1/api.py`)
+- [x] Integrated routers into main.py
+- [x] Created all __init__.py files for proper module structure
 
-### In Progress
+#### Phase 3: Semantic Matchmaker Engine ✅
+- [x] Implemented `MatchService` (`app/services/match_service.py`):
+  - Hybrid scoring: 70% vector similarity + 30% rule-based
+  - Semantic matching via embeddings
+  - Rule-based scoring (skills, constraints, experience)
+  - Match explanation generation
+  - Batch matching support
+  - Audit trail storage
+- [x] Match API Endpoints (`app/api/v1/endpoints/match.py`):
+  - POST /match - Semantic candidate-role matching
+  - POST /match/batch - Batch matching for specific candidates
+  - POST /match/roles - Create role descriptor with embedding
+  - GET /match/roles - List recruiter's role descriptors
+  - GET /match/roles/{id} - Get specific role descriptor
+- [x] Integrated match router into API
+- [x] Role descriptor CRUD with automatic embedding
 
-#### Phase 2: Embedding Service & Vector Store
-- [ ] API endpoints for embeddings and profiles
-- [ ] Authentication endpoints
-- [ ] Profile CRUD operations with automatic embedding generation
+#### Phase 4: Resume Generation & Typst Integration ✅
+- [x] Implemented `LLMService` (`app/services/llm_service.py`):
+  - Gemini API integration for text rephrasing
+  - Context-aware rephrasing (summaries, project descriptions)
+  - Character limit enforcement
+  - Claim preservation logic
+  - Fallback to original text on errors
+  - Project documentation generation
+- [x] Implemented `TypstService` (`app/services/typst_service.py`):
+  - Typst CLI compilation wrapper
+  - Template management
+  - Data injection via JSON files
+  - Timeout handling
+  - Template validation
+- [x] Resume Endpoints (`app/api/v1/endpoints/resumes.py`):
+  - POST /resumes/generate - Generate resume with AI rephrasing
+  - GET /resumes/{id} - Get resume metadata
+  - GET /resumes/{id}/download - Download generated PDF
+  - GET /resumes - List user's resumes
+  - GET /resumes/templates/list - List available templates
+  - POST /resumes/rephrase - Test rephrasing endpoint
+- [x] Resume schemas (`app/schemas/resume.py`)
+- [x] Copied Typst template from aidump/resume.typ
+- [x] Integrated resume router into API
+
+#### Phase 5: Verification & Signatures ✅
+- [x] Implemented `SignatureService` (`app/services/signature_service.py`):
+  - RSA key pair generation (2048-bit)
+  - Cryptographic claim signing (RSA-SHA256)
+  - Signature verification with tamper detection
+  - Claim revocation management
+  - Expiration checking
+- [x] Verification Schemas (`app/schemas/verification.py`)
+- [x] Verification Endpoints (`app/api/v1/endpoints/verification.py`):
+  - POST /verification/keys/generate - Generate RSA key pair
+  - POST /verification/sign - Sign verifiable claim
+  - POST /verification/verify - Verify claim signature
+  - POST /verification/revoke - Revoke claim
+  - GET /verification/claims/{id} - Get claim details
+  - GET /verification/claims/profile/{id} - List profile claims
+  - GET /verification/claims/issuer/me - List issuer's claims
+- [x] Integrated verification router into API
+
+#### Phase 6: Recruiter Portal API (Partially Complete)
+- [x] Basic matching endpoints
+- [ ] Consent management
+- [ ] Access request workflow
+
+#### Phase 7: Audit & Compliance (Not Started)
+- [ ] Audit logging service
+- [ ] Compliance endpoints
+- [ ] Data retention policies
+
+#### Phase 8: Documentation & Project Tools (Partially Complete)
+- [x] PROGRESS.md
+- [x] QUICKSTART.md
+- [x] README.md
+- [ ] API usage examples
+- [ ] Test fixtures
+- [ ] Integration tests
 
 ### Next Steps
 

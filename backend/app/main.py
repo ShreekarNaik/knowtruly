@@ -42,8 +42,8 @@ async def health_check():
     }
 
 # Import and include API routers
-# from app.api.v1.api import api_router
-# app.include_router(api_router, prefix=f"/api/{settings.API_VERSION}")
+from app.api.v1.api import api_router
+app.include_router(api_router, prefix=f"/api/{settings.API_VERSION}")
 
 if __name__ == "__main__":
     import uvicorn
