@@ -204,6 +204,11 @@ class MatchService:
         # Create or get role descriptor
         role_id = role_descriptor.get("id")
         
+        # Only store if role_id is provided
+        # For ad-hoc queries without saved role, skip storage
+        if not role_id:
+            return
+        
         # Store each match result
         for match in matches:
             match_result = MatchResult(

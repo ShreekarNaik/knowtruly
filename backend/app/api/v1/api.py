@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import auth, profiles, match, resumes, verification
+from app.api.v1.endpoints import auth, profiles, match, resumes, verification, audit
 
 api_router = APIRouter()
 
@@ -32,4 +32,10 @@ api_router.include_router(
     verification.router,
     prefix="/verification",
     tags=["verification"]
+)
+
+api_router.include_router(
+    audit.router,
+    prefix="/audit",
+    tags=["audit", "compliance", "gdpr"]
 )
